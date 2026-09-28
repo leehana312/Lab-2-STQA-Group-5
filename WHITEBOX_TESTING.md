@@ -1,8 +1,8 @@
 # White-Box Test Suite: check_task()
 
-Testers: Muhammad Ammar Aqim bin Mohd Alwi, Ikmal Hakim bin Mohd Fahmi, Nurfarhana Najihah Binti Mohd Fadli, Elisa Filza Mizwan Binti Lius, Nureen Nellysha binti Norazizi
-Date: 28 September 2026
-File under test: `whitebox_target.py`, function `check_task(priority, hours)`
+<br>Testers: Muhammad Ammar Aqim bin Mohd Alwi, Ikmal Hakim bin Mohd Fahmi, Nurfarhana Najihah Binti Mohd Fadli, Elisa Filza Mizwan Binti Lius, Nureen Nellysha binti Norazizi</br>
+<br>Date: 28 September 2026</br>
+<br>File under test: `whitebox_target.py`, function `check_task(priority, hours)`</br>
 
 ## 1. Control flow
 
