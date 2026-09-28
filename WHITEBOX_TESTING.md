@@ -11,11 +11,11 @@ with `and` / `or` still counts as one decision point for this lab.
 
 | # | Line (approx.) | Condition | True branch leads to | False branch leads to |
 |---|---|---|---|---|
-| D1 |23 | `priority is None or hours is None` | "Missing required field."|D2 |
-| D2 |26 | | | |
-| D3 |29 | | | |
-| D4 |32 | | | |
-| D5 |35 | | | |
+| D1 | 23 | `priority is None or hours is None` | return (False, "Missing required field.") | D2 |
+| D2 | 26 | `not isinstance(priority, int)` | return (False, "Priority must be a whole number.") | D3 |
+| D3 | 29 | `priority < 1 or priority > 6` | return (False, "Priority must be between 1 and 5.") | D4 |
+| D4 | 32 | `hours <= 0` | return (False, "Estimated hours must be positive.") | D5 |
+| D5 | 35 | `priority >= 4 and hours > 20` | return (False, "High priority tasks cannot exceed 20 hours.") | return (True, "Valid.") |
 
 ## 2. Coverage target
 
@@ -37,13 +37,13 @@ True or False branch, e.g. `D3-True`.
 
 | ID | Type | priority | hours | Covers | Expected | Actual (per code) | Bug? |
 |---|---|---|---|---|---|---|---|
-| TC-1 | Positive | 3 | 5 | D1F,D2F,D3F,D4F,D5F | Valid | Valid | No |
+| TC-1 | Positive | 3 | 5 | D1F, D2F, D3F, D4F, D5F | Valid | Valid | No |
 | TC-2 | Negative | None | 5 | D1T | Reject: missing field | Reject: missing field | No |
-| TC-3 | | | | | | | |
-| TC-4 | | | | | | | |
-| TC-5 | | | | | | | |
-| TC-6 | | | | | | | |
-| TC-7 | | | | | | | |
+| TC-3 | Negative | 3 | None | D1T | Reject: missing field | Reject: missing field | No |
+| TC-4 | Negative | 2.5 | 5 | D1F, D2T | Reject: priority must be a whole number | Reject: priority must be a whole number | No |
+| TC-5 | Negative | 0 | 5 | D1F, D2F, D3T | Reject: priority must be between 1 and 5 | Reject: priority must be between 1 and 5 | No |
+| TC-6 | Negative | 3 | 0 | D1F, D2F, D3F, D4T | Reject: hours must be positive | Reject: hours must be positive | No |
+| TC-7 | Negative | 5 | 25 | D1F, D2F, D3F, D4F, D5T | Reject: high priority cannot exceed 20 hours | Reject: high priority cannot exceed 20 hours | No |
 
 Add rows until every decision point has appeared as both True and False at
 least once. Check off the table in section 1 as you go.
@@ -63,4 +63,5 @@ a GitHub issue using the bug report template, then list it here.
 
 | Issue link | Linked test case | Short title | Severity | Priority |
 |---|---|---|---|---|
-| | | | | |
+| #<issue no.> | TC-8 | Priority 6 accepted as valid (upper bound checks > 6 instead of > 5) | Major | High |
+| #<issue no.> | TC-10 | Non-numeric hours raises unhandled TypeError instead of returning an error | Major | Medium |
