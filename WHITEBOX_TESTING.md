@@ -43,7 +43,7 @@ True or False branch, e.g. `D3-True`.
 | TC-4 | Negative | 2.5 | 5 | D1F, D2T | Reject: priority must be a whole number | Reject: priority must be a whole number | No |
 | TC-5 | Negative | 0 | 5 | D1F, D2F, D3T | Reject: priority must be between 1 and 5 | Reject: priority must be between 1 and 5 | No |
 | TC-6 | Negative | 3 | 0 | D1F, D2F, D3F, D4T | Reject: hours must be positive | Reject: hours must be positive | No |
-| TC-7 | Negative | 5 | 25 | D1F, D2F, D3F, D4F, D5T | Reject: high priority cannot exceed 20 hours | Reject: high priority cannot exceed 20 hours | No |
+| TC-7 | Negative | 6 | 5 | D1F, D2F, D3F, D4F, D5F | Reject: priority must be between 1 and 5 | Valid | Yes |
 
 Add rows until every decision point has appeared as both True and False at
 least once. Check off the table in section 1 as you go.
@@ -63,5 +63,4 @@ a GitHub issue using the bug report template, then list it here.
 
 | Issue link | Linked test case | Short title | Severity | Priority |
 |---|---|---|---|---|
-| #<issue no.> | TC-8 | Priority 6 accepted as valid (upper bound checks > 6 instead of > 5) | Major | High |
-| #<issue no.> | TC-10 | Non-numeric hours raises unhandled TypeError instead of returning an error | Major | Medium |
+| #<issue no.> | TC-7 | Priority 6 accepted as valid (upper bound checks > 6 instead of > 5) | Major | High |
