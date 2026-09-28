@@ -11,11 +11,11 @@ with `and` / `or` still counts as one decision point for this lab.
 
 | # | Line (approx.) | Condition | True branch leads to | False branch leads to |
 |---|---|---|---|---|
-| D1 |2 | `priority is None or hours is None` | "Missing required field."|D2 |
-| D2 | 4| | | |
-| D3 | | | | |
-| D4 | | | | |
-| D5 | | | | |
+| D1 |23 | `priority is None or hours is None` | "Missing required field."|D2 |
+| D2 |26 | | | |
+| D3 |29 | | | |
+| D4 |32 | | | |
+| D5 |35 | | | |
 
 ## 2. Coverage target
 
