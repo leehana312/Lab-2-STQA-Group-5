@@ -40,6 +40,10 @@ True or False branch, e.g. `D3-True`.
 | TC-1 | Positive | 3 | 5 | D1F,D2F,D3F,D4F,D5F | Valid | Valid | No |
 | TC-2 | Negative | None | 5 | D1T | Reject: missing field | Reject: missing field | No |
 | TC-3 | | | | | | | |
+| TC-4 | | | | | | | |
+| TC-5 | | | | | | | |
+| TC-6 | | | | | | | |
+| TC-7 | | | | | | | |
 
 Add rows until every decision point has appeared as both True and False at
 least once. Check off the table in section 1 as you go.
