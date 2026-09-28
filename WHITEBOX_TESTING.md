@@ -1,6 +1,11 @@
 # White-Box Test Suite: check_task()
 
-<br>Testers: Muhammad Ammar Aqim bin Mohd Alwi, Ikmal Hakim bin Mohd Fahmi, Nurfarhana Najihah Binti Mohd Fadli, Elisa Filza Mizwan Binti Lius, Nureen Nellysha binti Norazizi</br>
+<br>Testers: 
+1. Muhammad Ammar Aqim bin Mohd Alwi
+2. Ikmal Hakim bin Mohd Fahmi
+3. Nurfarhana Najihah Binti Mohd Fadli
+4. Elisa Filza Mizwan Binti Lius
+5. Nureen Nellysha binti Norazizi</br>
 <br>Date: 28 September 2026</br>
 <br>File under test: `whitebox_target.py`, function `check_task(priority, hours)`</br>
 
